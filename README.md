@@ -12,11 +12,20 @@ npm install --save-dev tailwindcss@3.3.2
 npx tailwindcss init
 ```
 
-<b>Debugging Notes</b>
+<h2>Debugging Notes</h2b>
+
+<b>Babel Issues</b>
 
 ```bash
 # For error: Cannot find module 'metro-react-native-babel-preset'.
 npm i metro-react-native-babel-preset --save-dev
+```
+
+<b>Pod Setup</b>
+
+```bash
+# For error: Installing pods failed.
+sudo gem install cocoapods
 
 ```
 
