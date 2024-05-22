@@ -1,46 +1,16 @@
 <h1>May's Menu</h1>
 <p>This project is a mobile app featuring a restaurant playlist -think Spotify, but for your favorite restaurants!</p>
 
-<h2>Dependencies</h2>
+<h2>Documentation</h2>
 
-<b>NativeWind</b>
-
-```bash
-# Instructions From NativeWind Doc.
-npm install nativewind
-npm install --save-dev tailwindcss@3.3.2
-npx tailwindcss init
-```
-
-<h2>Debugging Notes</h2b>
-
-<b>Babel Issues</b>
+<b>Expo Setup</b>
 
 ```bash
-# For error: Cannot find module 'metro-react-native-babel-preset'.
-npm i metro-react-native-babel-preset --save-dev
+# Instructions from Expo Doc.
+npx create-expo-app@latest
+npx expo install expo-dev-client
+npx expo start
 ```
 
-<b>Pod Setup</b>
-
-```bash
-# For error: Installing pods failed.
-sudo gem install cocoapods
-
-```
-
-<h2>Resources</h2>
-<!-- <li>
-    <ul>
-        <a href="https://reactnative.dev/
-        ">React Native Documentation</a>
-    </ul>
-    <ul>
-        <a href="https://www.nativewind.dev/">NativeWind Documentation</a>
-    </ul>
-</li> -->
-
-
-* <a href="https://reactnative.dev/
-">React Native Documentation</a>
-* <a href="https://www.nativewind.dev/">NativeWind Documentation</a>
+* <a href="https://reactnative.dev/">React Native Documentation</a>
+* <a href="https://docs.expo.dev/get-started/start-developing/">Expo Documentation</a>
