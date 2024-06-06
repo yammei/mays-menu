@@ -58,3 +58,4 @@ npx expo start
 
 * <a href="https://reactnative.dev/">React Native Documentation</a>
 * <a href="https://docs.expo.dev/get-started/start-developing/">Expo Documentation</a>
+* <a href="https://docs.expo.dev/get-started/start-developing/](https://react-svgr.com/playground/?native=true&typescript=true)">SVGR</a>
