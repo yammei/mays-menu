@@ -7,6 +7,7 @@
 <br>II. <a href='#ii'>Application Requirements</a>
 <br>III. <a href='#iii'>Development Setup</a>
 <br>IV <a href='#iv'>Resources</a>
+<br>V <a href='#v'>Feature Documentation</a>
 
 <h2 id='i'>I. Project Progress</h2>
 <!-- ✘ ✔ -->
@@ -59,3 +60,19 @@ npx expo start
 * <a href="https://reactnative.dev/">React Native Documentation</a>
 * <a href="https://docs.expo.dev/get-started/start-developing/">Expo Documentation</a>
 * <a href="https://docs.expo.dev/get-started/start-developing/](https://react-svgr.com/playground/?native=true&typescript=true)">SVGR</a>
+
+<h2 id='v'>V. Feature Documentation</h2>
+
+<section id='f1'>
+
+<b>Feature 1: Swipe Feature Navigation</b><br>
+Dependencies<br>
+
+```bash
+expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+expo install @react-navigation/native @react-navigation/stack @react-navigation/bottom-tabs
+```
+
+Notes
+
+</section>
