@@ -6,8 +6,8 @@
 <br>I. <a href='#i'>Project Progress</a>
 <br>II. <a href='#ii'>Application Requirements</a>
 <br>III. <a href='#iii'>Development Setup</a>
-<br>IV <a href='#iv'>Resources</a>
-<br>V <a href='#v'>Feature Documentation</a>
+<br>IV. <a href='#iv'>Resources</a>
+<br>V. <a href='#v'>Feature Documentation</a>
 
 <h2 id='i'>I. Project Progress</h2>
 <!-- ✘ ✔ -->
@@ -63,16 +63,53 @@ npx expo start
 
 <h2 id='v'>V. Feature Documentation</h2>
 
+</b>Feature-Index</b>
+<br>1. <a href='#f1'>Switching Screens</a>
+<br>2. <a href='#f2'>Navbar Buttons</a>
+
+<hr>
+
 <section id='f1'>
 
-Feature 1: <b>Swipe Feature Navigation</b><br><br>
-Dependencies
+<b>Feature 1: Navigation: Switching Screens</b><br><br>
 
+Dependencies:
 ```bash
 expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
 expo install @react-navigation/native @react-navigation/stack @react-navigation/bottom-tabs
 ```
 
-Notes
+Notes:<br>
+To be written.
 
 </section>
+
+<section id='f2'>
+
+<hr>
+<b>Feature 2: Navigation: Navbar Buttons</b><br><br>
+
+Dependencies:
+```js
+// These imports are the main dependencies.
+import { TouchableWithoutFeedback } from 'react-native';
+import Svg, { Path } from 'react-native-svg';
+
+// Component Example
+<TopBarButton
+   name='Button Name'                  // string
+   func={onPressFunction}              // () => void
+   cid={1}                             // number
+   color='rgb(255, 255, 255)'          // string
+   size='0 0 512 512'                  // string
+   pathing='SVG d/path attribute.'     // string
+   side='left/right'                   // string
+   visible={boolean}                   // boolean
+/>
+```
+Component Description:<br>
+The navigation bar buttons allows the user to navigate between various pages and components.<br>
+
+</section>
+
+
