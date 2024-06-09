@@ -110,7 +110,7 @@ import { StackNavigationProp } from '@react-navigation/stack';
 Component Description:<br>
 The navigation bar buttons allows the user to navigate between various pages and components.<br>
 
-Architecture:<br>
+Architecture:<br><br>
 <img src='https://raw.githubusercontent.com/yammei/image-repo/main/r6.png'/>
 </section>
 
