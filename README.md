@@ -35,7 +35,7 @@
 4. Security Features
     * Password encryption (Argon2).
     * MFA (optional for user).
-    * Account privacy settings. 
+    * Account privacy settings.
 
 <h2 id='iii'>III. Development Setup</h2>
 
@@ -92,24 +92,26 @@ To be written.
 Dependencies:
 ```js
 // These imports are the main dependencies.
-import { TouchableWithoutFeedback } from 'react-native';
-import Svg, { Path } from 'react-native-svg';
+import { StackScreensList } from '@/app/(tabs)/App';
+import { StackNavigationProp } from '@react-navigation/stack';
 
 // Component Example
-<TopBarButton
-   name='Button Name'                  // string
-   func={onPressFunction}              // () => void
-   cid={1}                             // number
-   color='rgb(255, 255, 255)'          // string
-   size='0 0 512 512'                  // string
-   pathing='SVG d/path attribute.'     // string
-   side='left/right'                   // string
-   visible={boolean}                   // boolean
+<NavBarButton
+    name='Main'                     // string
+    component='MainPage'            // keyof StackScreensList
+    func={testFunction}             // () => void
+    cid={1}                         // number
+    color={preset.colorIcon}        // string
+    size='0 0 576 512'              // string
+    pathing='M575.8 255.5c0...'     // string
+    navigation={navigation}         // StackNavigationProp<StackScreenList>;
 />
 ```
 Component Description:<br>
 The navigation bar buttons allows the user to navigate between various pages and components.<br>
 
+Architecture:<br>
+<img src='https://raw.githubusercontent.com/yammei/image-repo/main/r6.png'/>
 </section>
 
 
