@@ -1,50 +1,70 @@
+// NavBarButton.tsx
 import React, { useState } from 'react';
 import {
     View,
     Text,
-    StyleSheet
+    StyleSheet,
+    Pressable,
 } from 'react-native'
 import Svg, { SvgProps, Path } from "react-native-svg"
 import { devLog } from '@/dev/dev-log';
 import { cssPresetNavBar, cssPresetType } from '@/constants/Colors';
 
-interface ComponentProps {
+import { StackScreensList } from '@/app/(tabs)/App';
+import { StackNavigationProp } from '@react-navigation/stack';
+
+interface ButtonProps {
+    name: string,
+    component: keyof StackScreensList, // This will return where I want to go I think.
+    func: () => void,
+    cid: number,
+    color: string,
+    size: string,
     pathing: string;
-}
+    navigation: StackNavigationProp<StackScreensList>;
+};
 
-const NavBarButton: React.FC<ComponentProps> = (props) => {
+const NavBarButton: React.FC<ButtonProps> = (props) => {
 
-    const pathing = props.pathing;
+    const switchScreens = () => {
+        devLog(`Function Reached switchScreens(). To screen: ${props.component}.`);
+        props.navigation.navigate(props.component);
+    };
 
     const styles = componentStyles(cssPresetNavBar());
 
     return (
         <View style={styles.main}>
-            <Svg style={styles.icon}>
-                <Path d={props.pathing} />
-            </Svg>
+            <Pressable style={styles.container} onPressOut={switchScreens}>
+                <View>
+                    <Svg style={styles.icon} viewBox={props.size} {...props}>
+                        <Path d={props.pathing} fill={props.color}/>
+                    </Svg>
+                </View>
+
+            </Pressable>
         </View>
     );
-
-}
+};
 
 const componentStyles = (preset: cssPresetType) => StyleSheet.create({
     main: {
         alignItems: 'center',
-        minHeight: 25,
-        minWidth: 25,
-        maxHeight: 100,
-        maxWidth: 100,
-        height: 50,
-        width: 50,
-        borderColor: 'rgb(50, 50, 50)',
-        borderWidth: 1,
-        borderRadius: 100,
+        height: 25,
+        width: 25,
+        margin: 'auto',
         overflow: 'hidden',
+        // backgroundColor: 'cyan',
+    },
+    container: {
+        height: '100%',
+        width: '100%',
+        // backgroundColor: 'red',
     },
     icon: {
         height: '100%',
         width: '100%',
+        // backgroundColor: 'red',
     }
 
 });
