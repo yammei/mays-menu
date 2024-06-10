@@ -70,7 +70,10 @@ npx expo start
 <hr>
 
 <section id='f1'>
-<b>[1]Screen Navigation</b><br><br>
+<b>[1] Screen Navigation</b><br><br>
+
+Description:<br>
+The navigation bar buttons allows the user to navigate between various pages and components.<br>
 
 Dependencies:
 ```js
@@ -90,8 +93,6 @@ import { StackNavigationProp } from '@react-navigation/stack';
     navigation={navigation}         // StackNavigationProp<StackScreenList>;
 />
 ```
-Component Description:<br>
-The navigation bar buttons allows the user to navigate between various pages and components.<br>
 
 Architecture:<br><br>
 <img src='https://raw.githubusercontent.com/yammei/image-repo/main/r6.png'/>
@@ -101,6 +102,9 @@ Architecture:<br><br>
 
 <hr>
 <b>[2] Database Schema</b><br><br>
+
+Description:<br>
+Systemic database design to support app functions. Written for MySQL.
 
 Architecture:
 ```sql
