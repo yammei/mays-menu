@@ -61,33 +61,16 @@ npx expo start
 * <a href="https://docs.expo.dev/get-started/start-developing/">Expo Documentation</a>
 * <a href="https://docs.expo.dev/get-started/start-developing/](https://react-svgr.com/playground/?native=true&typescript=true)">SVGR</a>
 
-<h2 id='v'>V. Feature Documentation</h2>
+<h2 id='v'>V. System Documentation</h2>
 
 </b>Feature-Index</b>
 <br>1. <a href='#f1'>Switching Screens</a>
-<br>2. <a href='#f2'>Navbar Buttons</a>
+<br>2. <a href='#f2'>Database Schema</a>
 
 <hr>
 
 <section id='f1'>
-
-<b>Feature 1: Navigation: Switching Screens</b><br><br>
-
-Dependencies:
-```bash
-expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
-expo install @react-navigation/native @react-navigation/stack @react-navigation/bottom-tabs
-```
-
-Notes:<br>
-To be written.
-
-</section>
-
-<section id='f2'>
-
-<hr>
-<b>Feature 2: Navigation: Navbar Buttons</b><br><br>
+<b>[1]Screen Navigation</b><br><br>
 
 Dependencies:
 ```js
@@ -114,4 +97,45 @@ Architecture:<br><br>
 <img src='https://raw.githubusercontent.com/yammei/image-repo/main/r6.png'/>
 </section>
 
+<section id='f2'>
 
+<hr>
+<b>[2] Database Schema</b><br><br>
+
+Architecture:
+```sql
+create database maysmenu_database;
+use maysmenu_database;
+
+create user_account_data (
+    uid         int auto_increment  primary key,
+    first_name  varchar(30)         not null,
+    last_name   varchar(30)         not null,
+    username    varchar(20)         not null,
+    password    varchar(255)        not null,
+    email_address           varchar(50)         not null unique,
+    email_subscription      boolean             default false,
+    account_type            varchar(30)         default 'user',
+    account_creation_date   timestamp           default current_timestamp,
+    last_successful_login   timestamp           null,
+    failed_login_attempts   int                 default 0,
+    profile_picture_id      int                 default 1,
+);
+
+create user_app_data (
+    uid             int auto_increment  primary_key,
+    friends_list    varchar(5000)       null,
+    blocked_list    varchar(5000)       null,
+    itineraries     varchar(5000)       null,
+
+);
+
+create trigger
+after insert
+on users for each row
+begin
+    -- Trigger logic.
+end;
+```
+
+</section>
