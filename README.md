@@ -18,7 +18,10 @@
    <a href="https://github.com/yammei/image-repo/blob/main/r5.png">[Image]</a>
 <br>[In Progress] Development & Testing 
    <a href="https://github.com/yammei/mays-menu">[Repo]</a>
-
+   * Navigation UI [Tested]
+   * Database [In Progress]
+   * API Server
+   * UI Connection
 <h2 id='ii'>II. Application Requirements</h2>
 
 1. User Account System
@@ -95,7 +98,7 @@ import { StackNavigationProp } from '@react-navigation/stack';
 />
 ```
 
-<b>Architecture:</b><br>
+<b>Architecture:</b><br><br>
 <img src='https://raw.githubusercontent.com/yammei/image-repo/main/r6.png'/>
 </section>
 
@@ -129,10 +132,12 @@ create user_account_data (
 );
 
 create user_app_data (
-    uid             int auto_increment  primary_key,
-    friends_list    varchar(5000)       null,
-    blocked_list    varchar(5000)       null,
-    itineraries     varchar(5000)       null,
+    uid                 int auto_increment  primary_key,
+    friends_list        varchar(5000)       null,
+    blocked_list        varchar(5000)       null,
+    user_itineraries    varchar(5000)       null,
+    saved_itineraries   varchar(5000)       null,
+
 
 );
 
